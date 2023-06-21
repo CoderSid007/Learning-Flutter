@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 void main()
 {
   runApp(MaterialApp(
-    home: HomePage(),
-  )
-
-  );
+   home: HomePage(),
+    theme: ThemeData(
+      primarySwatch: Colors.cyan,
+    ),
+  ));
 }
 
 class HomePage extends StatelessWidget {
@@ -14,9 +15,13 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.cyanAccent,
-      child: Text("Flutter is so good")
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Awesome App"),
+      ),
+      body: Container(
+        child: Text("Hi flutter"),
+      ),
     );
   }
 }
